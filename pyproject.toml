@@ -12,5 +12,7 @@ django = "5.1.3"
 
 
 [build-system]
-requires = ["poetry-core"]
+# Earliest version with Python 3.13 support
+# https://github.com/python-poetry/poetry-core/releases/tag/1.9.1
+requires = ["poetry-core>=1.9.1"]
 build-backend = "poetry.core.masonry.api"
