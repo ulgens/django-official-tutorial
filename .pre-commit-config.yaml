@@ -26,7 +26,7 @@ repos:
             # This is needed so `admin.site.register()` example from
             # https://docs.djangoproject.com/en/5.1/intro/tutorial07/
             # can stay intact.
-            # https://github.com/adamchainz/django-upgrade?tab=readme-ov-file#admin-model-registration
+            # https://github.com/adamchainz/django-upgrade#admin-model-registration
             --skip, "admin_register"
         ]
 
