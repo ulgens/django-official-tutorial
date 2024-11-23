@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-official-tutorial"
-version = "2024.11.20"
+version = "2024.11.23"
 description = ""
 authors = ["Ülgen Sarıkavak <oss@ulgenwanders.net>"]
 readme = "README.md"
