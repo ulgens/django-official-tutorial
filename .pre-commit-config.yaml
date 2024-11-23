@@ -21,7 +21,14 @@ repos:
     rev: 1.22.1
     hooks:
     -   id: django-upgrade
-        args: [--target-version, "5.1"]
+        args: [
+            --target-version, "5.1",
+            # This is needed so `admin.site.register()` example from
+            # https://docs.djangoproject.com/en/5.1/intro/tutorial07/
+            # can stay intact.
+            # https://github.com/adamchainz/django-upgrade?tab=readme-ov-file#admin-model-registration
+            --skip, "admin_register"
+        ]
 
 -   repo: https://github.com/codespell-project/codespell
     rev: v2.3.0
