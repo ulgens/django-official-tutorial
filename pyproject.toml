@@ -8,11 +8,11 @@ package-mode = false
 
 [tool.poetry.dev-dependencies]
 # Used by Django's find_formatters and run_formatters (with a monkey patch)
-ruff = "0.8.1"
+ruff = "0.8.2"
 
 [tool.poetry.dependencies]
 python = "^3.13"
-django = "5.1.3"
+django = "5.1.4"
 django-debug-toolbar = "4.4.6"
 
 
