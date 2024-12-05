@@ -6,7 +6,7 @@ authors = ["Ülgen Sarıkavak <oss@ulgenwanders.net>"]
 readme = "README.md"
 package-mode = false
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 # Used by Django's find_formatters and run_formatters (with a monkey patch)
 ruff = "0.8.2"
 
