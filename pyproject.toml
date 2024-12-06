@@ -1,8 +1,14 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+# Earliest version with Python 3.13 support
+# https://github.com/python-poetry/poetry-core/releases/tag/1.9.1
+requires = [ "poetry-core>=1.9.1" ]
+
 [tool.poetry]
 name = "django-official-tutorial"
 version = "2024.11.23"
 description = ""
-authors = ["Ülgen Sarıkavak <oss@ulgenwanders.net>"]
+authors = [ "Ülgen Sarıkavak <oss@ulgenwanders.net>" ]
 readme = "README.md"
 package-mode = false
 
@@ -15,18 +21,13 @@ python = "^3.13"
 django = "5.1.4"
 django-debug-toolbar = "4.4.6"
 
-
 [tool.ruff]
-line-length = 120
 target-version = "py313"
 
-[tool.ruff.format]
-preview = true
-
-[tool.ruff.lint]
-preview = true
+line-length = 120
+format.preview = true
 # https://docs.astral.sh/ruff/rules/
-select = [
+lint.select = [
     # https://docs.astral.sh/ruff/rules/#flake8-builtins-a
     # https://github.com/gforcada/flake8-builtins
     "A",
@@ -112,24 +113,17 @@ select = [
     # https://github.com/PyCQA/pycodestyle
     "W",
 ]
-
-[tool.ruff.lint.per-file-ignores]
 # RUF012 is violated by Django-generated migrations.
 # Fixing them manually each time doesn't seem to add value.
 # https://docs.astral.sh/ruff/rules/mutable-class-default/
-"**/migrations/*" = ["RUF012"]
+lint.per-file-ignores."**/migrations/*" = [ "RUF012" ]
+# I really don't know why ruff expects two different isort sections - @ulgens
+lint.isort.known-first-party = [ "polls" ]
+lint.preview = true
 
 [tool.isort]
 # We don't use black directly but ruff uses the same profile name with isort.
 profile = "black"
 
-# I really don't know why ruff expects two different isort sections - @ulgens
-[tool.ruff.lint.isort]
-known-first-party = ["polls"]
-
-
-[build-system]
-# Earliest version with Python 3.13 support
-# https://github.com/python-poetry/poetry-core/releases/tag/1.9.1
-requires = ["poetry-core>=1.9.1"]
-build-backend = "poetry.core.masonry.api"
+[tool.pyproject-fmt]
+indent = 4
