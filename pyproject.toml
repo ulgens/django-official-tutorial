@@ -14,6 +14,8 @@ classifiers = [
 dependencies = [
     "django==6.0.2",
     "django-debug-toolbar==6.2.0",
+    "django-environ==0.13.0",
+    "psycopg==3.3.3",
 ]
 
 [dependency-groups]
