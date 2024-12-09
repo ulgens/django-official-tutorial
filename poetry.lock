@@ -50,6 +50,44 @@ django = ">=4.2.9"
 sqlparse = ">=0.2"
 
 [[package]]
+name = "django-environ"
+version = "0.11.2"
+description = "A package that allows you to utilize 12factor inspired environment variables to configure your Django application."
+optional = false
+python-versions = ">=3.6,<4"
+files = [
+    {file = "django-environ-0.11.2.tar.gz", hash = "sha256:f32a87aa0899894c27d4e1776fa6b477e8164ed7f6b3e410a62a6d72caaf64be"},
+    {file = "django_environ-0.11.2-py2.py3-none-any.whl", hash = "sha256:0ff95ab4344bfeff693836aa978e6840abef2e2f1145adff7735892711590c05"},
+]
+
+[package.extras]
+develop = ["coverage[toml] (>=5.0a4)", "furo (>=2021.8.17b43,<2021.9.dev0)", "pytest (>=4.6.11)", "sphinx (>=3.5.0)", "sphinx-notfound-page"]
+docs = ["furo (>=2021.8.17b43,<2021.9.dev0)", "sphinx (>=3.5.0)", "sphinx-notfound-page"]
+testing = ["coverage[toml] (>=5.0a4)", "pytest (>=4.6.11)"]
+
+[[package]]
+name = "psycopg"
+version = "3.2.3"
+description = "PostgreSQL database adapter for Python"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "psycopg-3.2.3-py3-none-any.whl", hash = "sha256:644d3973fe26908c73d4be746074f6e5224b03c1101d302d9a53bf565ad64907"},
+    {file = "psycopg-3.2.3.tar.gz", hash = "sha256:a5764f67c27bec8bfac85764d23c534af2c27b893550377e37ce59c12aac47a2"},
+]
+
+[package.dependencies]
+tzdata = {version = "*", markers = "sys_platform == \"win32\""}
+
+[package.extras]
+binary = ["psycopg-binary (==3.2.3)"]
+c = ["psycopg-c (==3.2.3)"]
+dev = ["ast-comments (>=1.1.2)", "black (>=24.1.0)", "codespell (>=2.2)", "dnspython (>=2.1)", "flake8 (>=4.0)", "mypy (>=1.11)", "types-setuptools (>=57.4)", "wheel (>=0.37)"]
+docs = ["Sphinx (>=5.0)", "furo (==2022.6.21)", "sphinx-autobuild (>=2021.3.14)", "sphinx-autodoc-typehints (>=1.12)"]
+pool = ["psycopg-pool"]
+test = ["anyio (>=4.0)", "mypy (>=1.11)", "pproxy (>=2.7)", "pytest (>=6.2.5)", "pytest-cov (>=3.0)", "pytest-randomly (>=3.5)"]
+
+[[package]]
 name = "ruff"
 version = "0.8.2"
 description = "An extremely fast Python linter and code formatter, written in Rust."
@@ -105,4 +143,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.13"
-content-hash = "9f24c5ea5f1da9bb79db8cd9c8eacc2450a8d84532b9fbe2b72aea88ddb4d93b"
+content-hash = "41659430e6238f385f1e8932db9dafbd62ffc048c498947ae96160c95cdbf73a"

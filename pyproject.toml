@@ -20,6 +20,8 @@ ruff = "0.8.2"
 python = "^3.13"
 django = "5.1.4"
 django-debug-toolbar = "4.4.6"
+django-environ = "0.11.2"
+psycopg = "3.2.3"
 
 [tool.ruff]
 target-version = "py313"
