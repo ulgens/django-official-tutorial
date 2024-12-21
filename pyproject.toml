@@ -14,7 +14,7 @@ package-mode = false
 
 [tool.poetry.group.dev.dependencies]
 # Used by Django's find_formatters and run_formatters (with a monkey patch)
-ruff = "0.8.2"
+ruff = "0.8.4"
 
 [tool.poetry.dependencies]
 python = "^3.13"
