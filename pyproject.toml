@@ -18,7 +18,7 @@ ruff = "0.8.4"
 
 [tool.poetry.dependencies]
 python = "^3.13"
-django = "5.1.4"
+django = "5.1.5"
 django-debug-toolbar = "4.4.6"
 
 [tool.ruff]
