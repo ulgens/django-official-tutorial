@@ -1,15 +1,21 @@
 [build-system]
 build-backend = "poetry.core.masonry.api"
-# Earliest version with Python 3.13 support
-# https://github.com/python-poetry/poetry-core/releases/tag/1.9.1
-requires = [ "poetry-core>=1.9.1" ]
+requires = [ "poetry-core>=2" ]
 
-[tool.poetry]
+[project]
 name = "django-official-tutorial"
 version = "2024.11.23"
 description = ""
-authors = [ "Ülgen Sarıkavak <oss@ulgenwanders.net>" ]
 readme = "README.md"
+authors = [
+    { name = "Ülgen Sarıkavak", email = "ulgensrkvk@gmail.com" },
+]
+requires-python = ">=3.13"
+classifiers = [ "Programming Language :: Python :: 3 :: Only", "Programming Language :: Python :: 3.13" ]
+# https://python-poetry.org/docs/dependency-specification#projectdependencies-and-toolpoetrydependencies
+dynamic = [ "dependencies" ]
+
+[tool.poetry]
 package-mode = false
 
 [tool.poetry.group.dev.dependencies]
