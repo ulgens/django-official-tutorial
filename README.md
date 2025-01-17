@@ -28,7 +28,7 @@ The resulting Django project has some changes from the original tutorial:
 2. Set up the virtual environment using Poetry:
     ```bash
     poetry install
-    poetry shell
+    poetry env activate
     ```
 3. Apply database migrations:
     ```bash
