@@ -6,7 +6,7 @@ The tutorial is available [here](https://docs.djangoproject.com/en/5.1/intro/tut
 
 This repository serves as a **project starter** for those who need a quick Django setup with a simple app. To enhance its utility, some additional tooling has been included:
 
-- **Poetry** for dependency management
+- **uv** for dependency management
 - **pre-commit** for code quality, incorporating:
   - `pre-commit-hooks`
   - `ruff`
@@ -25,10 +25,11 @@ The resulting Django project has some changes from the original tutorial:
 ## Installation
 
 1. Clone the repository
-2. Set up the virtual environment using Poetry:
+2. Set up the virtual environment using uv:
     ```bash
-    poetry install
-    poetry env activate
+    uv venv
+    source .venv/bin/activate
+    uv sync
     ```
 3. Apply database migrations:
     ```bash
