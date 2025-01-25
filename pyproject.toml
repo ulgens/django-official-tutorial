@@ -1,7 +1,7 @@
 [project]
 name = "django-official-tutorial"
 version = "2024.11.23"
-description = ""
+description = "The famous polls app from the official Django tutorial, with some additional tooling."
 readme = "README.md"
 authors = [
     { name = "Ülgen Sarıkavak", email = "ulgensrkvk@gmail.com" },
