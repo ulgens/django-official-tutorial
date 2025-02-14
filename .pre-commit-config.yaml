@@ -18,7 +18,7 @@ repos:
         name: ruff format
 
 -   repo: https://github.com/adamchainz/django-upgrade
-    rev: 1.22.2
+    rev: 1.23.1
     hooks:
     -   id: django-upgrade
         args: [
@@ -31,6 +31,6 @@ repos:
         ]
 
 -   repo: https://github.com/codespell-project/codespell
-    rev: v2.3.0
+    rev: v2.4.1
     hooks:
     -   id: codespell
