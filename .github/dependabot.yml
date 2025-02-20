@@ -2,6 +2,7 @@
 # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
+enable-beta-ecosystems: true
 updates:
   - package-ecosystem: "pip"
     directory: "/"
@@ -20,3 +21,8 @@ updates:
       github-actions:
         patterns:
           - "*"
+
+  - package-ecosystem: "docker-compose"
+    directory: "/"
+    schedule:
+      interval: "monthly"
