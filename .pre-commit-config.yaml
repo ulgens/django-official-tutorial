@@ -18,11 +18,10 @@ repos:
         name: ruff format
 
 -   repo: https://github.com/adamchainz/django-upgrade
-    rev: 1.23.1
+    rev: 1.24.0
     hooks:
     -   id: django-upgrade
         args: [
-            --target-version, "5.1",
             # This is needed so `admin.site.register()` example from
             # https://docs.djangoproject.com/en/5.1/intro/tutorial07/
             # can stay intact.
