@@ -20,4 +20,4 @@ dev = [
 
 [tool.uv]
 package = false
-required-version = ">=0.5.0"
+required-version = ">=0.7.0"
