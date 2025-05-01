@@ -9,13 +9,13 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "django==5.2",
-    "django-debug-toolbar==5.1.0",
+    "django-debug-toolbar==5.2.0",
 ]
 
 [dependency-groups]
 dev = [
     # Used by Django's find_formatters and run_formatters (with a monkey patch)
-    "ruff==0.11.3",
+    "ruff==0.11.7",
 ]
 
 [tool.uv]
