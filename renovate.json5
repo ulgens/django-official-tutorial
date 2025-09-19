@@ -47,10 +47,22 @@
       "abandonmentThreshold": "1 year"
     },
     {
-      "matchDatasources": [
-        "pypi",
-        "python-version"
-      ],
+      "matchCategories": ["ci"],
+      "groupName": "CI Dependencies",
+      "enabled": true
+    },
+    {
+      "matchCategories": ["docker"],
+      "groupName": "Docker Dependencies",
+      "enabled": true
+    },
+    {
+      "matchManagers": ["pre-commit"],
+      "groupName": "pre-commit Dependencies",
+      "enabled": true
+    },
+    {
+      "matchCategories": ["python"],
       "groupName": "Python Dependencies",
       "enabled": true
     }
