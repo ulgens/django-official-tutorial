@@ -1,0 +1,59 @@
+name: "Lint & formatting check"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request: ~
+
+env:
+  PYTHON_VERSION: 3.14.0rc2
+  UV_VERSION: 0.8.22
+  PREK_VERSION: 0.2.3
+
+jobs:
+  run-prek:
+    name: prek run --all-files
+    runs-on: ubuntu-24.04
+    timeout-minutes: 1
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+    - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
+      id: setup-uv
+      uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+      with:
+        enable-cache: true
+        python-version: ${{ env.PYTHON_VERSION }}
+        version: ${{ env.UV_VERSION }}
+
+    - name: Cache prek
+      id: cache-precommit
+      uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      with:
+        path: ~/.cache/prek
+        key: >
+          prek-
+          ${{ runner.os }}-
+          ${{ env.UV_VERSION }}-
+          ${{ env.PYTHON_VERSION }}-
+          ${{ env.PRE_COMMIT_VERSION }}-
+          ${{ hashFiles('.pre-commit-config.yaml') }}
+        restore-keys: >
+          prek-
+          ${{ runner.os }}-
+          ${{ env.UV_VERSION }}-
+          ${{ env.PYTHON_VERSION }}-
+          ${{ env.PRE_COMMIT_VERSION }}-
+
+    - name: Run prek
+      # TODO:
+      #   Try to separate the installation of prek
+      #   without hurting the cache.
+      run: >
+        uv run
+        --no-sync
+        --with prek==${{ env.PREK_VERSION }}
+        prek run --all-files
