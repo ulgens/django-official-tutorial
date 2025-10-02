@@ -11,7 +11,7 @@ on:
 
 env:
     PYTHON_VERSION: 3.13.7
-    UV_VERSION: 0.8.4
+    UV_VERSION: 0.8.22
 
 jobs:
   run-django-tests:
