@@ -7,11 +7,12 @@ The tutorial is available [here](https://docs.djangoproject.com/en/5.1/intro/tut
 This repository serves as a **project starter** for those who need a quick Django setup with a simple app. To enhance its utility, some additional tooling has been included:
 
 - **uv** for dependency management
-- **pre-commit** for code quality, incorporating:
-  - `pre-commit-hooks`
-  - `ruff`
-  - `django-upgrade`
-  - `codespell`
+- [**prek**](https://github.com/j178/prek?tab=readme-ov-file#installation) for running & managing git hooks, incorporating:
+  - [pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks)
+  - [pyproject-fmt](https://github.com/tox-dev/pyproject-fmt)
+  - [ruff](https://github.com/astral-sh/ruff-pre-commit)
+  - [django-upgrade](https://github.com/adamchainz/django-upgrade)
+  - [codespell](https://github.com/codespell-project/codespell)
 - **GitHub Actions** for pre-commit and test pipelines
 - **Dependabot** for automated dependency updates
 
