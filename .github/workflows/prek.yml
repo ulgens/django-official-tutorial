@@ -9,7 +9,7 @@ on:
 env:
   PYTHON_VERSION: 3.14.0
   UV_VERSION: 0.9.4
-  PREK_VERSION: 0.2.4
+  PREK_VERSION: 0.2.10
 
 jobs:
   run-prek:
