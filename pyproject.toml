@@ -19,7 +19,7 @@ dependencies = [
 [dependency-groups]
 dev = [
     # Used by Django's find_formatters and run_formatters (with a monkey patch)
-    "ruff==0.14.5",
+    "ruff==0.14.7",
 ]
 
 [tool.uv]
