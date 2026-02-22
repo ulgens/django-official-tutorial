@@ -51,6 +51,17 @@ repos:
             --skip, "admin_register"
         ]
 
+-   repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.36.2
+    hooks:
+      # https://github.com/python-jsonschema/check-jsonschema/pull/643#issuecomment-3903138224
+      # https://github.com/python-jsonschema/check-jsonschema/issues/586
+    -   id: check-renovate
+        files: ^renovate.json5$
+        language: python
+        additional_dependencies:
+        -   pyjson5==2.0.0
+
 -   repo: https://github.com/codespell-project/codespell
     rev: v2.4.1
     hooks:
