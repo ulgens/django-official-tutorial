@@ -10,10 +10,10 @@ on:
   pull_request: ~
 
 env:
-    # renovate: datasource=python-version depName=python
-    PYTHON_VERSION: 3.14.3
-    # renovate: datasource=pypi depName=uv
-    UV_VERSION: 0.10.4
+  # renovate: datasource=python-version depName=python
+  PYTHON_VERSION: 3.14.3
+  # renovate: datasource=pypi depName=uv
+  UV_VERSION: 0.10.4
 
 jobs:
   run-django-tests:
@@ -22,23 +22,23 @@ jobs:
     timeout-minutes: 1
 
     steps:
-    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      name: Checkout
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        name: Checkout
 
-    - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
-      uses: astral-sh/setup-uv@eac588ad8def6316056a12d4907a9d4d84ff7a3b # v7.3.0
-      with:
-        # The default value is "auto" and it resolves to "true" in Github-hosted runners, but explicit is better.
-        enable-cache: true
-        # uv can install Python, no need for actions/setup-python
-        # https://github.com/astral-sh/setup-uv?tab=readme-ov-file#do-i-still-need-actionssetup-python-alongside-setup-uv
-        # https://github.com/astral-sh/setup-uv?tab=readme-ov-file#python-version
-        python-version: ${{ env.PYTHON_VERSION }}
-        version: ${{ env.UV_VERSION }}
+      - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
+        uses: astral-sh/setup-uv@eac588ad8def6316056a12d4907a9d4d84ff7a3b  # v7.3.0
+        with:
+          # The default value is "auto" and it resolves to "true" in Github-hosted runners, but explicit is better.
+          enable-cache: true
+          # uv can install Python, no need for actions/setup-python
+          # https://github.com/astral-sh/setup-uv?tab=readme-ov-file#do-i-still-need-actionssetup-python-alongside-setup-uv
+          # https://github.com/astral-sh/setup-uv?tab=readme-ov-file#python-version
+          python-version: ${{ env.PYTHON_VERSION }}
+          version: ${{ env.UV_VERSION }}
 
-    - name: Install packages
-      run: uv sync --frozen --no-install-project
+      - name: Install packages
+        run: uv sync --frozen --no-install-project
 
-    - name: Run tests
-      working-directory: ./src
-      run: uv run python manage.py test --parallel --shuffle
+      - name: Run tests
+        working-directory: ./src
+        run: uv run python manage.py test --parallel --shuffle
