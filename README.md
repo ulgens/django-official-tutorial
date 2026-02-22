@@ -10,6 +10,7 @@ This repository serves as a **project starter** for those who need a quick Djang
 - [**prek**](https://github.com/j178/prek?tab=readme-ov-file#installation) for running & managing git hooks, incorporating:
   - [pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks)
   - [pyproject-fmt](https://github.com/tox-dev/pyproject-fmt)
+  - [uv-pre-commit](https://github.com/astral-sh/uv-pre-commit)
   - [ruff](https://github.com/astral-sh/ruff-pre-commit)
   - [django-upgrade](https://github.com/adamchainz/django-upgrade)
   - [codespell](https://github.com/codespell-project/codespell)
