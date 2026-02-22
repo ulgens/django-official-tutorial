@@ -13,6 +13,7 @@ This repository serves as a **project starter** for those who need a quick Djang
   - [uv-pre-commit](https://github.com/astral-sh/uv-pre-commit)
   - [ruff](https://github.com/astral-sh/ruff-pre-commit)
   - [django-upgrade](https://github.com/adamchainz/django-upgrade)
+  - [yamlfmt](https://github.com/google/yamlfmt)
   - [codespell](https://github.com/codespell-project/codespell)
 - **GitHub Actions** for prek and test pipelines
 - **Renovate** for automated dependency updates
