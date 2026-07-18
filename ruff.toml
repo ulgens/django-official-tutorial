@@ -93,6 +93,12 @@ select = [
     # https://github.com/PyCQA/pycodestyle
     "W",
 ]
+ignore = [
+    # noqa comments and rule numbers feel more familiar for now,
+    # can be revisited later.
+    # https://docs.astral.sh/ruff/rules/noqa-comments/
+    "RUF105",
+]
 
 [lint.per-file-ignores]
 # RUF012 is violated by Django-generated migrations.
