@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.14"
 classifiers = [
+    "Framework :: Django :: 6.0",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.14",
 ]
