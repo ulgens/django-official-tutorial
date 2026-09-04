@@ -1,3 +1,2 @@
 indent = 4
 keep_full_version = true
-max_supported_python = "3.14"
