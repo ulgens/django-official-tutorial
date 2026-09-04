@@ -41,4 +41,4 @@ jobs:
 
       - name: Run tests
         working-directory: ./src
-        run: uv run python manage.py test --parallel --shuffle
+        run: uv run python -Wd manage.py test --parallel --shuffle
