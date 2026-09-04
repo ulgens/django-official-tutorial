@@ -1,8 +1,18 @@
 # django-official-tutorial
 
+> [!IMPORTANT]
+> **This repository is archived and no longer maintained.**
+>
+> It was created as a personal practice and a potential project starter for the official Django tutorial. Considering Django tutorial doesn't change much and I don't use Django as much as I used to, I decided to archive the repository.
+>
+> If you decide to fork and make use of the repo, make sure to update all your dependencies first.
+
 The famous **polls app** from the official Django tutorial.
 
 The tutorial is available [here](https://docs.djangoproject.com/en/5.1/intro/tutorial01/). The code in this repository reflects the state of the tutorial as of **November 23, 2024**.
+
+> [!Warning]
+> The project uses the current latest Django version (6.1.1), but I didn't review the latest state of the docs line by line. Beware of any inconsistencies.
 
 This repository serves as a **project starter** for those who need a quick Django setup with a simple app. To enhance its utility, some additional tooling has been included:
 
