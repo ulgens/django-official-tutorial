@@ -7,6 +7,7 @@ These patches are applied when they are imported from core.__init__ during the D
 
 import shutil
 import subprocess  # noqa: S404
+import sys
 
 from django.core.management import utils
 
@@ -21,7 +22,7 @@ def find_formatters() -> dict:
 utils.find_formatters = find_formatters
 
 
-def run_formatters(written_files, ruff_path=(sentinel := object())):  # noqa: B008
+def run_formatters(written_files, ruff_path=(sentinel := object()), stderr=sys.stderr):  # noqa: B008
     """
     Run ruff on the given files.
     """
